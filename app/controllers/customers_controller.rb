@@ -4,7 +4,9 @@ class CustomersController < ApplicationController
   # GET /customers
   # GET /customers.json
   def index
-    @customers = Customer.all
+    #@customers = Customer.all
+    @customers  = Customer.where { name == "gen" }
+    @customers2 = Customer.where { name == "gen" }
   end
 
   # GET /customers/1
