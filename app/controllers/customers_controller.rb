@@ -7,10 +7,10 @@ class CustomersController < ApplicationController
     #@customers = Customer.all
     #@customers  = Customer.where { name == "gen" }
     @customers2 = Customer
-      .joins { orders.product }
-      #where{ products.name == '魚'}
-      .group{ [customers.id, products.id] }
       .select{ [(customers.name).as(name), (products.name).as(product), (count(products.id)).as(count)] }
+      .joins { orders.product }
+      .group{ [customers.id, products.id] }
+      #where{ products.name == '魚'}
   end
 
   # GET /customers/1
