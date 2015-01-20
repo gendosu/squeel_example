@@ -28,6 +28,8 @@ gem 'spring',        group: :development
 
 gem "squeel"
 
+gem "slim-rails"
+
 group :development do
   gem "rspec", "~> 3.0.0"
   gem "rspec-rails", "~> 3.0.0"
