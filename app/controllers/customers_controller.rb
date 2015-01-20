@@ -6,7 +6,9 @@ class CustomersController < ApplicationController
   def index
     #@customers = Customer.all
     @customers  = Customer.where { name == "gen" }
-    @customers2 = Customer.where { name == "gen" }
+    p @customers
+    @customers2 = Customer.joins { orders }
+    p @customers2
   end
 
   # GET /customers/1
